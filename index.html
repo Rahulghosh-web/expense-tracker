@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>💸 Expense Tracker</h1>
+    
+    <div class="form">
+      <input type="text" id="desc" placeholder="Description" />
+      <input type="number" id="amount" placeholder="Amount (₹)" />
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <select id="month">
+        <option disabled selected>Select Month</option>
+        <script>
+          const months = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+          ];
+          months.forEach((m, i) => {
+            document.write(`<option value="${i}">${m}</option>`);
+          });
+        </script>
+      </select>
+      <button onclick="addTransaction()">Add</button>
+    </div>
+
+    <div class="summary">
+      <label for="filter-month">Filter by Month:</label>
+      <select id="filter-month" onchange="filterByMonth()">
+        <option value="all">All</option>
+        <script>
+          months.forEach((m, i) => {
+            document.write(`<option value="${i}">${m}</option>`);
+          });
+        </script>
+      </select>
+      <div class="balance">Balance: ₹<span id="balance">0</span></div>
+    </div>
+
+    <ul id="list" class="list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

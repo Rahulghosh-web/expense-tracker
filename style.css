@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+  }
+  
+  .container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form input, .form select, .form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  
+  .form button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .form button:hover {
+    background-color: #218838;
+  }
+  
+  .summary {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .summary select {
+    padding: 5px;
+  }
+  
+  .balance {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .list {
+    margin-top: 20px;
+    list-style: none;
+  }
+  
+  .list li {
+    background: #f1f1f1;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-left: 6px solid;
+    border-radius: 10px;
+    animation: fadeIn 0.4s ease-in;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .list li.income {
+    border-color: #28a745;
+  }
+  
+  .list li.expense {
+    border-color: #dc3545;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
